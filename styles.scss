@@ -8,7 +8,7 @@
 .about {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0 auto;
-  @include size(100%, 600px);
+  @include size(100%, auto);
   background-color: #07334b;
   max-width: 1900px;
   position: relative;
@@ -155,12 +155,12 @@
 
   .me {
     z-index: 2;
-    @include size(60%, 100%);
+    @include size(60%, auto);
     @include flexCenter(column, center, center);
 
     .me_container {
       font-size: 16px;
-      @include size(80%, 70%);
+      @include size(80%, auto);
       @include flexCenter(column, space-around, center);
       background-color: rgba(7, 51, 75, 0.9);
       color: white;
@@ -183,7 +183,7 @@
 
 @media (max-width: 1000px) {
   .about {
-    @include size(100%, 600px);
+    @include size(100%, auto);
     @include flexCenter(row, space-around, center);
 
     .form {
@@ -195,7 +195,7 @@
     }
 
     .me {
-      @include size(50%, 100%);
+      @include size(50%, auto);
 
       .me_container {
         font-size: 14px;
@@ -206,7 +206,7 @@
 
 @media (max-width: 720px) {
   .about {
-    @include size(100%, 1000px);
+    @include size(100%, autox);
     @include flexCenter(column, flex-start, center);
 
     .form {
@@ -218,10 +218,19 @@
     }
 
     .me {
-      @include size(100%, 500px);
+      @include size(100%, auto);
+      min-height: 200px;
 
       .me_container {
-        @include size(95%, 90%);
+        @include size(95%, 300px);
+        min-height: 200px;
+        @include flexCenter(column, center, center);
+
+        .paragraph {
+          @include flexCenter(column, space-around, center);
+          min-height: 200px;
+          border: 1px solid red;
+        }
       }
     }
   }

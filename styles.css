@@ -9,7 +9,7 @@
   font-family: Arial, Helvetica, sans-serif;
   margin: 0 auto;
   width: 100%;
-  height: 600px;
+  height: auto;
   background-color: #07334b;
   max-width: 1900px;
   position: relative;
@@ -247,7 +247,7 @@
 .about .me {
   z-index: 2;
   width: 60%;
-  height: 100%;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -268,7 +268,7 @@
 .about .me .me_container {
   font-size: 16px;
   width: 80%;
-  height: 70%;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -305,7 +305,7 @@
 @media (max-width: 1000px) {
   .about {
     width: 100%;
-    height: 600px;
+    height: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -331,7 +331,7 @@
   }
   .about .me {
     width: 50%;
-    height: 100%;
+    height: auto;
   }
   .about .me .me_container {
     font-size: 14px;
@@ -341,7 +341,7 @@
 @media (max-width: 720px) {
   .about {
     width: 100%;
-    height: 1000px;
+    height: autox;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -368,11 +368,46 @@
   }
   .about .me {
     width: 100%;
-    height: 500px;
+    height: auto;
+    min-height: 200px;
   }
   .about .me .me_container {
     width: 95%;
-    height: 90%;
+    height: 300px;
+    min-height: 200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about .me .me_container .paragraph {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-height: 200px;
+    border: 1px solid red;
   }
 }
 /*# sourceMappingURL=styles.css.map */
