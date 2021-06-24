@@ -13,13 +13,12 @@ function getData(e) {
   var data = [name, email, message];
   let xhr = new XMLHttpRequest();
 
-  xhr.open("GET", "send_email.php?name="+ name, true);
+  xhr.open("GET", "send_email.php?name=" + name, true);
   //xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
 
   xhr.onload = function () {
     if (this.status == 200) {
       console.log(this.responseText);
-
     } else if (this.status == 404) {
       console.log("No lo lograste bebe");
     }
@@ -36,16 +35,16 @@ function postData(e) {
 
   var data = [name, email, message];
 
-  var params = "data="+data
+  var params = "data=" + data;
+
   let xhr = new XMLHttpRequest();
 
   xhr.open("POST", "send_email.php", true);
-  xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+  xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
   xhr.onload = function () {
     if (this.status == 200) {
       console.log(this.responseText);
-
     } else if (this.status == 404) {
       console.log("No lo lograste bebe");
     }
