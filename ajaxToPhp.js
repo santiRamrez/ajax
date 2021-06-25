@@ -34,7 +34,6 @@ function postData(e) {
   var message = document.getElementById("message").value;
 
   var data = [name, email, message];
-
   var params = "data=" + data;
 
   let xhr = new XMLHttpRequest();
