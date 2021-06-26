@@ -33,8 +33,14 @@ function postData(e) {
   var email = document.getElementById("email").value;
   var message = document.getElementById("message").value;
 
-  var data = [name, email, message];
-  var params = "data=" + data;
+  var data = {
+    name: name,
+    email: email,
+    message: message,
+  };
+
+  var jsonContactForm = JSON.stringify(data);
+  var params = "data=" + jsonContactForm;
 
   let xhr = new XMLHttpRequest();
 
